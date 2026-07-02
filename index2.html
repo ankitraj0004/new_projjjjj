@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Landing Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:white;
+    position:fixed;
+    width:100%;
+    top:0;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#4f46e5;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#4f46e5;
+}
+
+/* Hero */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:150px 10% 100px;
+    min-height:100vh;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    color:white;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero-text h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:20px;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+.btn{
+    padding:15px 35px;
+    background:white;
+    color:#4f46e5;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ddd;
+}
+
+.hero img{
+    width:450px;
+}
+
+/* Features */
+
+.features{
+    padding:100px 10%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:60px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin:20px 0;
+    color:#4f46e5;
+}
+
+/* About */
+
+.about{
+    padding:100px 10%;
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
+.about img{
+    width:450px;
+}
+
+.about-text h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:1.8;
+}
+
+/* Contact */
+
+.contact{
+    padding:100px 10%;
+    background:white;
+}
+
+.contact form{
+    max-width:700px;
+    margin:auto;
+}
+
+input,textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+button{
+    background:#4f46e5;
+    color:white;
+    border:none;
+    padding:15px 40px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#3729c4;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111827;
+    color:white;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text{
+width:100%;
+margin-bottom:50px;
+}
+
+.hero img{
+width:100%;
+max-width:400px;
+}
+
+.about{
+flex-direction:column;
+text-align:center;
+}
+
+.about img{
+width:100%;
+max-width:400px;
+}
+
+nav{
+padding:20px;
+}
+
+nav ul{
+display:none;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+
+<div class="logo">MyWebsite</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Features</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Create Amazing Websites</h1>
+
+<p>
+Build beautiful, responsive, and modern websites with clean design
+and smooth user experience.
+</p>
+
+<a href="#" class="btn">Get Started</a>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700" alt="">
+
+</section>
+
+<section class="features">
+
+<h2 class="title">Our Features</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Fast</h3>
+<p>
+Optimized performance for lightning-fast loading.
+</p>
+</div>
+
+<div class="card">
+<h3>Responsive</h3>
+<p>
+Looks perfect on desktop, tablet and mobile devices.
+</p>
+</div>
+
+<div class="card">
+<h3>Secure</h3>
+<p>
+Built using modern standards for safety and reliability.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700" alt="">
+
+<div class="about-text">
+
+<h2>About Us</h2>
+
+<p>
+
+We create attractive websites using modern technologies.
+Our mission is to provide clean, responsive, and user-friendly
+interfaces that help businesses grow online.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<textarea rows="6" placeholder="Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 MyWebsite. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
